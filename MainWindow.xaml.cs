@@ -89,6 +89,7 @@ namespace Phonebook
             txtName.Clear();
             txtPhone.Clear();
             txtEmail.Clear();
+            txtContactType.Clear();
         }
 
         private void ActivateButtons(int btn)

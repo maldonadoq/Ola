@@ -8,30 +8,36 @@
         Title="MainWindow" Height="600" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="333*"/>
-            <ColumnDefinition Width="467*"/>
+            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="400*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Id" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtId" Height="23" HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
 
-        <Label Content="Name" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtName" Height="23" HorizontalAlignment="Left" Margin="10,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="2"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtId" Height="23" HorizontalAlignment="Left" Margin="10,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
 
-        <Label Content="Phone" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtPhone" Height="23" HorizontalAlignment="Left" Margin="10,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="2"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtName" Height="23" HorizontalAlignment="Left" Margin="10,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="365"/>
 
-        <Label Content="Email" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtEmail" Height="23" HorizontalAlignment="Left" Margin="10,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="2"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="17,148,0,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.499,0.019"/>
+        <TextBox x:Name="txtPhone" Height="23" HorizontalAlignment="Left" Margin="17,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="357" Grid.Column="1"/>
 
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="10,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnAdd_Click"/>
-        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="95,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnEdit_Click"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="180,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnDelete_Click"/>
-        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="265,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="btnSearch_Click"/>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="17,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnSave_Click" Grid.Column="1"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="102,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Grid.Column="1" Click="btnCancel_Click"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEmail" Height="23" HorizontalAlignment="Left" Margin="10,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="365"/>
+
+        <Label Content="Conctact type" HorizontalAlignment="Left" Margin="17,225,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtContactType" Height="23" HorizontalAlignment="Left" Margin="17,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="357" Grid.Column="1"/>
+
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="10,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnAdd_Click" Background="#55C875"/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="105,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnEdit_Click" Background="#55C875"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="200,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnDelete_Click" Background="#55C875"/>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="295,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnSearch_Click" Background="#55C875"/>
+
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="196,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnSave_Click" Grid.Column="1" Background="#55C875"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="294,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnCancel_Click" Grid.Column="1" Background="#55C875"/>
 
 
         <DataGrid x:Name="dgContacts" IsReadOnly="True" HorizontalAlignment="Left" Height="160" Margin="10,415,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="2" MouseDoubleClick="dgContacts_MouseDoubleClick" SelectionMode="Single"/>
+        <Label Content="Phonebook&#xD;&#xA;" HorizontalAlignment="Left" Margin="18,24,0,0" VerticalAlignment="Top" Width="127" FontSize="20" Height="46"/>
 
     </Grid>
 </Window>
