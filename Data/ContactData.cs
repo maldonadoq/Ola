@@ -50,6 +50,7 @@ namespace Phonebook.Data
                     contact.name = updatedContact.name;
                     contact.phone = updatedContact.phone;
                     contact.email = updatedContact.email;
+                    contact.category = updatedContact.category;
                 }
                 db.SaveChanges();
             }
