@@ -23,6 +23,7 @@ namespace Phonebook
     public partial class MainWindow : Window
     {
         private string operation = "";
+        private int selectedId = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -34,6 +35,8 @@ namespace Phonebook
             contact.name = txtName.Text;
             contact.phone = txtPhone.Text;
             contact.email = txtEmail.Text;
+            contact.category = txtContactType.Text;
+
             switch (operation)
             {
 
@@ -41,7 +44,7 @@ namespace Phonebook
                     ContactData.AddToDb(contact);
                     break;
                 case "edit":
-                    ContactData.EditToDb(Convert.ToInt32(txtId.Text), contact);
+                    ContactData.EditToDb(selectedId, contact);
                     break;
                 default:
                     Console.WriteLine("Nothing");
@@ -85,7 +88,6 @@ namespace Phonebook
 
         private void CleanFields()
         {
-            txtId.Clear();
             txtName.Clear();
             txtPhone.Clear();
             txtEmail.Clear();
@@ -97,7 +99,7 @@ namespace Phonebook
             btnAdd.IsEnabled = false;
             btnEdit.IsEnabled = false;
             btnDelete.IsEnabled = false;
-            btnSearch.IsEnabled = false;
+            //btnSearch.IsEnabled = false;
             btnSave.IsEnabled = false;
             btnCancel.IsEnabled = false;
 
@@ -105,7 +107,7 @@ namespace Phonebook
             {
                 case 1:
                     btnAdd.IsEnabled = true;
-                    btnSearch.IsEnabled = true;
+                    //btnSearch.IsEnabled = true;
                     break;
                 case 2:
                     btnCancel.IsEnabled = true;
@@ -118,7 +120,7 @@ namespace Phonebook
             }
         }
 
-        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        /* private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
             if (txtName.Text.Trim().Count() > 0)
             {
@@ -128,7 +130,7 @@ namespace Phonebook
                 }
                 catch { }
             }
-        }
+        } */
 
         private void dgContacts_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -136,20 +138,33 @@ namespace Phonebook
             {
                 Contact contact = (Contact)dgContacts.SelectedItem;
 
-                txtId.Text = contact.id.ToString();
+                selectedId = contact.id;
                 txtName.Text = contact.name.ToString();
                 txtPhone.Text = contact.phone.ToString();
                 txtEmail.Text = contact.email.ToString();
+                txtContactType.Text = contact.category.ToString();
                 ActivateButtons(3);
             }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            ContactData.DeleteFromDb(Convert.ToInt32(txtId.Text));
+            ContactData.DeleteFromDb(selectedId);
             ListContacts();
             ActivateButtons(1);
             CleanFields();
+        }
+
+        private void btnViewName_Click(object sender, RoutedEventArgs e)
+        {
+            NameWindow nameWindow = new NameWindow();
+            nameWindow.Show();
+        }
+
+        private void btnViewType_Click(object sender, RoutedEventArgs e)
+        {
+            TypeWindow typeWindow = new TypeWindow();
+            typeWindow.Show();
         }
     }
 }

@@ -12,32 +12,65 @@
             <ColumnDefinition Width="400*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Id" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtId" Height="23" HorizontalAlignment="Left" Margin="10,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Phonebook" HorizontalAlignment="Left" Margin="18,24,0,0" VerticalAlignment="Top" Width="182" FontSize="25" FontWeight="DemiBold"  Height="46"/>
+        <Separator Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="5" Margin="18,84,0,0" VerticalAlignment="Top" Width="756"/>
 
-        <Label Content="Name" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtName" Height="23" HorizontalAlignment="Left" Margin="10,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="365"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" FontSize="15" FontWeight="SemiBold"/>
+        <TextBox x:Name="txtName" Height="30" HorizontalAlignment="Left" Margin="10,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="365" FontSize="15" VerticalContentAlignment="Center"/>
 
-        <Label Content="Phone" HorizontalAlignment="Left" Margin="17,148,0,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.499,0.019"/>
-        <TextBox x:Name="txtPhone" Height="23" HorizontalAlignment="Left" Margin="17,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="357" Grid.Column="1"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="17,124,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="15" FontWeight="SemiBold"/>
+        <TextBox x:Name="txtPhone" Height="30" HorizontalAlignment="Left" Margin="17,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="357" Grid.Column="1" FontSize="15" VerticalContentAlignment="Center"/>
 
-        <Label Content="Email" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtEmail" Height="23" HorizontalAlignment="Left" Margin="10,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="365"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top" FontSize="15" FontWeight="SemiBold"/>
+        <TextBox x:Name="txtEmail" Height="30" HorizontalAlignment="Left" Margin="10,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="365" FontSize="15" VerticalContentAlignment="Center"/>
 
-        <Label Content="Conctact type" HorizontalAlignment="Left" Margin="17,225,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox x:Name="txtContactType" Height="23" HorizontalAlignment="Left" Margin="17,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="357" Grid.Column="1"/>
+        <Label Content="Contact type" HorizontalAlignment="Left" Margin="17,201,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="15" FontWeight="SemiBold"/>
+        <TextBox x:Name="txtContactType" Height="30" HorizontalAlignment="Left" Margin="17,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="357" Grid.Column="1" FontSize="15" VerticalContentAlignment="Center"/>
 
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="10,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnAdd_Click" Background="#55C875"/>
-        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="105,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnEdit_Click" Background="#55C875"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="200,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnDelete_Click" Background="#55C875"/>
-        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="295,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnSearch_Click" Background="#55C875"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="10,309,0,0" Width="80" Height="40" VerticalAlignment="Top" Click="btnAdd_Click" Background="#55C875" FontSize="15" FontWeight="SemiBold"/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="105,309,0,0" Width="80" Height="40" VerticalAlignment="Top" Click="btnEdit_Click" Background="#55C875" FontSize="15" FontWeight="SemiBold"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="200,309,0,0" Width="80" Height="40" VerticalAlignment="Top" Click="btnDelete_Click" Background="#55C875" FontSize="15" FontWeight="SemiBold"/>
+        <!--<Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="295,326,0,0" Width="80" Height="40" VerticalAlignment="Top" Click="btnSearch_Click" Background="#55C875" FontSize="15" FontWeight="SemiBold"/>-->
 
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="196,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnSave_Click" Grid.Column="1" Background="#55C875"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="294,326,0,0" Width="80" Height="23" VerticalAlignment="Top" Click="btnCancel_Click" Grid.Column="1" Background="#55C875"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="196,309,0,0" Width="80" Height="40" VerticalAlignment="Top" Click="btnSave_Click" Grid.Column="1" Background="#55C875" FontSize="15" FontWeight="SemiBold"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="294,309,0,0" Width="80" Height="40" VerticalAlignment="Top" Click="btnCancel_Click" Grid.Column="1" Background="#55C875" FontSize="15" FontWeight="SemiBold"/>
+
+        <Button x:Name="btnViewName" Content="Group by Name" HorizontalAlignment="Left" Margin="50,31,0,0" Width="130" Height="40" VerticalAlignment="Top" Grid.Column="1" Background="#55C875" Click="btnViewName_Click" FontSize="15"/>
+        <Button x:Name="btnViewType" Content="Group by contact Type" HorizontalAlignment="Left" Margin="204,31,0,0" Width="170" Height="40" VerticalAlignment="Top" Grid.Column="1" Background="#55C875" Click="btnViewType_Click" FontSize="15"/>
 
 
-        <DataGrid x:Name="dgContacts" IsReadOnly="True" HorizontalAlignment="Left" Height="160" Margin="10,415,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="2" MouseDoubleClick="dgContacts_MouseDoubleClick" SelectionMode="Single"/>
-        <Label Content="Phonebook&#xD;&#xA;" HorizontalAlignment="Left" Margin="18,24,0,0" VerticalAlignment="Top" Width="127" FontSize="20" Height="46"/>
+        <DataGrid 
+            x:Name="dgContacts"
+            IsReadOnly="True"
+            HorizontalAlignment="Left" 
+            Height="190"
+            Margin="10,365,0,0"
+            VerticalAlignment="Top"
+            Width="760"
+            Grid.ColumnSpan="2"
+            MouseDoubleClick="dgContacts_MouseDoubleClick" 
+            SelectionMode="Single"
+            AutoGenerateColumns="False"
+            RowHeight="28"
+        >
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#898989" />
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Height" Value="25"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="30" Binding="{Binding id}"/>
+                <DataGridTextColumn Header="Name" Width="220" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Phone" Width="153" Binding="{Binding phone}"/>
+                <DataGridTextColumn Header="Email" Width="200" Binding="{Binding email}"/>
+                <DataGridTextColumn Header="Type" Width="150" Binding="{Binding category}"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
