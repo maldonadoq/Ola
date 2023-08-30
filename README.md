@@ -2,6 +2,8 @@
 
 ## Run
 ```console
+$ git clone https://github.com/maldonadoq/phonebook.git
+$ cd phonebook
 $ dotnet run
 ```
 
